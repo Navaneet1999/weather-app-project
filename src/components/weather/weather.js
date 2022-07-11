@@ -6,16 +6,7 @@ export default function Current({ weatherInfo, location, date }) {
   return (
     <div className="weather_box">
     <div className="Weather">
-      <div className="Weather__info">
-        <img
-          className="Weather__icon"
-          src={
-            "https://openweathermap.org/img/wn/" +
-            weatherInfo.current.weather[0].icon +
-            ".png"
-          }
-          alt={weatherInfo.current.weather[0].main}
-        />
+      <div className="Weather__info"> 
         <ul className="Weather__list">
           <li className="list__temperature">
             {Math.round(weatherInfo.current.temp)}
@@ -27,6 +18,15 @@ export default function Current({ weatherInfo, location, date }) {
             Wind: {Math.round(weatherInfo.current.wind_speed * 3.6)} km/h{" "}
           </li>
         </ul>
+        <img
+          className="Weather__icon"
+          src={
+            "https://openweathermap.org/img/wn/" +
+            weatherInfo.current.weather[0].icon +
+            ".png"
+          }
+          alt={weatherInfo.current.weather[0].main}
+        />
       </div>
       <div className="Weather__other-info">
         <h2 className="other-info__city">
@@ -34,12 +34,6 @@ export default function Current({ weatherInfo, location, date }) {
           {location.state || location.country.toUpperCase()}
         </h2>
         <h3 className="other-info__clouds">{date}</h3>
-        {/* <h3 className="other-info__clouds">
-          
-          Humidity: {weatherInfo.current.humidity}%
-        </h3> */}
-        
-        
       </div>
       
       </div>

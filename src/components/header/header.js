@@ -6,10 +6,7 @@ import "./header.css";
 export default function Header({ searchCity }) {
     return ( 
         <header className = "Header" >
-        
-        {/* <h1 className = "Header__title" > Weather </h1>  */}
-        <Search searchCity = { searchCity }/>
-         
+            <Search searchCity = { searchCity }/>
         </header>
     );
 }

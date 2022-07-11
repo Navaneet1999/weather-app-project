@@ -6,7 +6,6 @@ export default function Forecast({ weatherInfo, date }) {
   return (
     <div>
       <h1 className="Forecast__title">{[date[0], date[1], date[2]]}</h1>
-      
       <div className="Forecast__temperature">
         <span className="temperature__max">
           {Math.round(weatherInfo.temp.max)}

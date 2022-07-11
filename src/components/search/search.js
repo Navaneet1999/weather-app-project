@@ -23,14 +23,12 @@ export default function Search({ searchCity }) {
       <label className="Search__label">
         <input
           className="Search__input"
+          placeholder="Search....."
           value={currentCity}
           onChange={handleInputChange}
           onKeyPress={handleKeyPress}
         />
       </label>
-      {/* <button className="Search__button" onClick={handleButtonClick}>
-        Search
-      </button> */}
     </div>
   );
 }

@@ -94,6 +94,7 @@ function App() {
       .then((res) => {
         setWeatherAndForecastInfo(res.data);
         setContentState("weatherAndForecast");
+        console.log(res.data);
       })
       .catch((error) => showWarning());
   }, [coordinates]);

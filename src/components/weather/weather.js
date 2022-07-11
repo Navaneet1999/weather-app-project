@@ -4,6 +4,7 @@ import "./weather.css";
 
 export default function Current({ weatherInfo, location, date }) {
   return (
+    <div className="weather_box">
     <div className="Weather">
       <div className="Weather__info">
         <img
@@ -20,7 +21,7 @@ export default function Current({ weatherInfo, location, date }) {
             {Math.round(weatherInfo.current.temp)}
             <sup className="list__temperature-symbol">°C</sup>
           </li>
-          <li> Humidity: {weatherInfo.current.humidity}% </li>
+          <li> {weatherInfo.current.weather[0].description} </li>
           <li>
             {" "}
             Wind: {Math.round(weatherInfo.current.wind_speed * 3.6)} km/h{" "}
@@ -33,9 +34,26 @@ export default function Current({ weatherInfo, location, date }) {
           {location.state || location.country.toUpperCase()}
         </h2>
         <h3 className="other-info__clouds">{date}</h3>
-        <h3 className="other-info__clouds">
-          {weatherInfo.current.weather[0].description}
+        {/* <h3 className="other-info__clouds">
+          
+          Humidity: {weatherInfo.current.humidity}%
+        </h3> */}
+        
+        
+      </div>
+      
+      </div>
+      <div className="weather_prs">
+        <div className="weather_left">
+        <h3>
+        Pressure: {weatherInfo.current.pressure} hpa
         </h3>
+        </div>
+        <div className="weather_right">
+        <h3>
+        Humidity: {weatherInfo.current.humidity}%
+        </h3>
+        </div>
       </div>
     </div>
   );

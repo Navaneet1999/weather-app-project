@@ -8,7 +8,7 @@ async function getWeatherAndForecast(coordinates) {
         lat: coordinates.lat,
         lon: coordinates.lng,
         exclude: "minutely,hourly,alerts",
-        appid: "178606e287ff6c8466e0a61d9f70d58b",
+        appid: "1b825daf58d455d1161c0dd1607a1aec",
         units: "metric"
       }
     }

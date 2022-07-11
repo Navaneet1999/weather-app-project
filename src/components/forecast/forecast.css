@@ -1,20 +1,20 @@
 .Forecast__title {
-    font-size: 0.9rem;
-    text-align: center;
-  }
+  font-size: 0.9rem;
+  text-align: center;
+}
   
-  .Forecast__weather-icon {
-    width: 60px;
-    height: 60px;
-  }
+.Forecast__weather-icon {
+  width: 60px;
+  height: 60px;
+}
   
-  .Forecast__weather-icon:hover {
-    animation-name: icons;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-  }
+.Forecast__weather-icon:hover {
+  animation-name: icons;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
   
-  @keyframes icons {
+  /* @keyframes icons {
     0% {
       position: relative;
       top: 0;
@@ -27,18 +27,18 @@
       position: relative;
       top: 0;
     }
-  }
+  } */
   
-  .Forecast__temperature {
-    display: flex;
-    justify-content: center;
-  }
+.Forecast__temperature {
+  display: flex;
+  justify-content: center;
+}
   
-  .temperature__max {
-    margin-right: 0.2rem;
-    color: #f37928;
-  }
+.temperature__max {
+  margin-right: 0.2rem;
+    /*  */
+}
   
-  .temperature__min {
-    margin-left: 0.2rem;
-  }
+.temperature__min {
+  margin-left: 0.2rem;
+}

@@ -1,18 +1,22 @@
 .WeatherAndForecast {
-    display: flex;
-    flex-direction: column;
-    color: #f2f2f2;
-    padding: 2rem 3rem;
-  }
+  display: flex;
+  flex-direction: column;
+  /* color: #f2f2f2; */
+  padding: 2rem 3rem;
+}
   
-  .WeatherAndForecast__container {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 1.5rem;
-  }
+.WeatherAndForecast__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+
+.WeatherAndForecast__temp{
+  margin-top: 20px;
+}
   
-  @media (max-width: 375px) {
-    .WeatherAndForecast {
-      padding: 2rem;
-    }
+@media (max-width: 375px) {
+  .WeatherAndForecast {
+    padding: 2rem;
   }
+}

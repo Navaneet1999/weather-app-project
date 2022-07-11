@@ -4,6 +4,7 @@ import './App.css';
 import WeatherAndForecast from './components/weatherandforecast/weatherforecast';
 import Warning from "./components/warning/warning";
 import Header from "./components/header/header";
+import Loader from "./components/loader/loader";
 
 import getAddressOfCoordinates from "./api/coordinateapi";
 import getCoordinatesOfAddress from "./api/addressapi";
@@ -97,26 +98,24 @@ function App() {
       .catch((error) => showWarning());
   }, [coordinates]);
 
-  // const Main = {
-  //   blank: () => null,
-  //   warning: () => <Warning />,
-  //   weatherAndForecast: () => (
-  //     <WeatherAndForecast
-  //       weatherInfo={weatherAndForecastInfo}
-  //       location={locationInfo}
-  //     />
-  //   )
-  // };
-
-  return (
-    <div className="App">
-      <div>
-        <>
-        <Header searchCity={searchCity} />
-        <WeatherAndForecast
+  const Main = {
+    blank: () => null,
+    loading: () => <Loader />,
+    warning: () => <Warning />,
+    weatherAndForecast: () => (
+      <WeatherAndForecast
         weatherInfo={weatherAndForecastInfo}
         location={locationInfo}
       />
+    )
+  };
+
+  return (
+    <div className="App">
+      <div className="App__container">
+        <>
+        <Header searchCity={searchCity} />
+        {Main[contentState]()}
         </>
       </div>
     </div>

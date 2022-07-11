@@ -28,9 +28,9 @@ export default function Search({ searchCity }) {
           onKeyPress={handleKeyPress}
         />
       </label>
-      <button className="Search__button" onClick={handleButtonClick}>
+      {/* <button className="Search__button" onClick={handleButtonClick}>
         Search
-      </button>
+      </button> */}
     </div>
   );
 }

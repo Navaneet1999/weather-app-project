@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-
+import { City } from "country-state-city";
 import "./search.css";
 
 export default function Search({ searchCity }) {
   const [currentCity, setCurrentCity] = useState("");
+  console.log("cities",City.getAllCities());
+  // const cities = [
+    
+  // ]
 
   function handleInputChange(event) {
     setCurrentCity(event.target.value);
